@@ -1,6 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>pagemachine/renovate-config"
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePrefixes": [
+        "phpstan/"
+      ],
+      "matchPackageNames": [
+        "jangregor/phpstan-prophecy",
+        "saschaegerer/phpstan-typo3",
+        "rector/rector"
+      ],
+      "groupName": "PHPStan"
+    }
   ]
 }
